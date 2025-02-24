@@ -29,7 +29,7 @@
 
     
       
-        <title>Power Budget - EGR314 Team 308; Ethan Peterson Individual Repository</title>
+        <title>Power Budget Overview for Sensor - EGR314 Team 308; Ethan Peterson Individual Repository</title>
       
     
     
@@ -123,7 +123,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Power Budget
+              Power Budget Overview for Sensor
             
           </span>
         </div>
@@ -255,7 +255,7 @@
   
     
   
-  Power Budget
+  Power Budget Overview for Sensor
 
       </a>
     </li>
@@ -403,7 +403,7 @@
         
   
   <span class="md-ellipsis">
-    Power Budget
+    Power Budget Overview for Sensor
   </span>
   
 
@@ -471,9 +471,64 @@
   
 
 
-  <h1>Power Budget</h1>
+  <h1>Power Budget Overview for Sensor</h1>
 
-
+<p>Power Budget Calculation</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Voltage Range (V)</th>
+<th>Typical Voltage (V)</th>
+<th>Max Current (mA)</th>
+<th>Power (mW)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ESP32-S3-WROOM-1-N4</td>
+<td>3.0V - 3.6V</td>
+<td>3.3V</td>
+<td>200mA</td>
+<td>660mW</td>
+</tr>
+<tr>
+<td>Blue surface mount LED</td>
+<td>2.8V - 3.6V</td>
+<td>3.3V</td>
+<td>125mA</td>
+<td>108mW</td>
+</tr>
+<tr>
+<td>HDC1010YPAR</td>
+<td>2.7V - 5.5V</td>
+<td>3.3V</td>
+<td>20mA</td>
+<td>66mW</td>
+</tr>
+<tr>
+<td><strong>Total (maximum) Power Consumption</strong></td>
+<td>-</td>
+<td>3.3V</td>
+<td>240mA</td>
+<td>726mW</td>
+</tr>
+</tbody>
+</table>
+<p>Final Microcontroller Selection &amp; Rationale</p>
+<p>The ESP32-S3-WROOM-1-N4 is optimal due to its low power consumption, integrated communication (Wi-Fi/Bluetooth), and robust GPIO options. This selection ensures reliable performance and efficient integration with all sensors and peripherals. It is also highly compatible for the sensor part of the team’s circuit. Due to the I2C communication, it may communicate with the ESP32 and carry the same voltage 3.3V. I would need to use pull-up resistors around some parts of the sensor and ensure correct amperage using these sensors as well.</p>
+<p>Power Source &amp; Voltage Regulator Selection</p>
+<p>I need to ensure that this part receives the correct amperage. Due to the team planning to use 5V instead of 3.3V for this side of the circuit we then have two choices. These choices are to either use 3.3V for the whole board or to use an LDO, since it is a minimal change of 1.7V we hope that this LDO regulator may work in reducing the voltage running through my devices. I will have to construct a circuit that regualates the voltage similar to the voltage regulator lab we finished in class.
+| Solution                        | Pros                                      | Cons                              |
+|---------------------------------|-------------------------------------------|-----------------------------------|
+| <strong>LDO Regulator</strong>               | Simple, Readily available, Low noise      | Higher heat dissipation           |
+| <strong>AMS1117-3.3V (Selected)</strong>     |                                           |                                   |
+|                                 |                                           |                                   |
+| <strong>Switching Regulator</strong>         | High efficiency, Low heat generation      | Bulkier, Requires additional components |
+| <strong>LM2596-3.3V</strong>                 |                                           |                                   |</p>
+<p><strong>Rationale:</strong> The AMS1117-3.3V was chosen for its simplicity and ease of implementation in a low-power embedded system.</p>
+<p><strong>Conclusion</strong>
+This component selection ensures an efficient, low-power, and scalable design for a weather monitoring system using an ESP32-S3-WROOM-1-N4 and HDC1010YPAR temperature and humidity sensor.</p>
 
 
 
