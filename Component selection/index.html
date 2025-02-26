@@ -610,32 +610,30 @@
 <p><a href="https://www.espressif.com/en/products/socs/esp32-s3">ESP32</a></p>
 <p><a href="https://www.microchip.com/en-us/product/pic18f47q10">Pic18</a></p>
 <p><a href="https://estore.st.com/en/stm32f103c4t6a-cpn.html">STM32</a></p>
-<p><strong>Choice:</strong> Option 1 ESP32-S3-WROOM-1-N4 microcontroller</p>
-<p><strong>Rationale:</strong> The ESP32-S3-WROOM-1-N4 was chosen for its integrated Wi-Fi, Bluetooth, and low power consumption, making it ideal for remote weather monitoring. Later on in Power Consumption, you may view how the 3.3V consumption will have to taken in consideration. This will use an LDO. </p>
+<p><strong>Choice:</strong> Option 2 PIC18F47Q10 microcontroller</p>
+<p><strong>Rationale:</strong> The PIC18F47Q10 was chosen for its reliability, simplicity, and cost-effectiveness in an industrial setting. You may view how the 3.3V consumption will have to be considered. This will use an LDO. </p>
 <hr />
 <h2 id="part-2-microcontroller-pin-allocation">Part 2. Microcontroller Pin Allocation</h2>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/8c4b1265-8eff-4810-8514-f933d0ff4170" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-07 at 10 04 09 PM" src="https://github.com/user-attachments/assets/8c4b1265-8eff-4810-8514-f933d0ff4170" /></a>
-<a class="glightbox" href="https://github.com/user-attachments/assets/44638fbc-5ac2-4631-aaee-26c051906e96" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-07 at 10 04 28 PM" src="https://github.com/user-attachments/assets/44638fbc-5ac2-4631-aaee-26c051906e96" /></a>
-<a class="glightbox" href="https://github.com/user-attachments/assets/af1de4a5-e1bd-4810-9679-eae397ddceef" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-07 at 10 04 41 PM" src="https://github.com/user-attachments/assets/af1de4a5-e1bd-4810-9679-eae397ddceef" /></a>
-<a class="glightbox" href="https://github.com/user-attachments/assets/f2b688a3-5e4b-4866-9fdb-48c5cb45f3b2" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-07 at 10 04 56 PM" src="https://github.com/user-attachments/assets/f2b688a3-5e4b-4866-9fdb-48c5cb45f3b2" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/5a534626-29b3-4805-875c-037f50a4fd90" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-26 at 11 18 07 AM" src="https://github.com/user-attachments/assets/5a534626-29b3-4805-875c-037f50a4fd90" /></a></p>
+<p>The project demanded me not to use ESP32, therefore the data relating to esp32 on this document are unrelated.</p>
 <p><a href="https://docs.google.com/document/d/16eBhtJ1a93Trgb88zd__rfECLNrKxZGtmtAWUIEOJiY/edit?tab=t.0#heading=h.ge7hmtquj7cv">(Find links to ESP32 data in PDF)</a></p>
 <p><strong>Description of role in the team:</strong>
-I am working on the sensor. This project was largely inspired by this working example of a weather monitoring system: <a href="https://srituhobby.com/how-to-make-a-weather-monitoring-system-with-esp32-board/">link</a>. The system will use a 3.3V supply for my part in the team and use I2C communication with the ESP32. I used the I2C communication for a sensor last semester so I am somewhat familiar with how it works, although I am not used to the ESP32 nor does the worked-out example have it to be used. Another problem was that I could not use the DHT11, however, after looking at the datasheet of the DHT11, I found that the only major difference technically between my two devices was that the DHT was more expensive and had a measuring supply current of 980 µW instead of 220 µW. This will make me have to design the voltage and current supply accordingly by using a low-dropout (LDO) regulator or a buck converter to provide a stable 3.3V supply from the main power source.
+I am working on the sensor. This project was largely inspired by this working example of a weather monitoring system: <a href="https://srituhobby.com/how-to-make-a-weather-monitoring-system-with-esp32-board/">link</a>. The system will use a 3.3V supply for my part in the team and use I2C communication with the ESP32. I used the I2C communication for a sensor last semester so I am somewhat familiar with how it works, I am starting to familiarize myself with how the PIC18F47Q10 works although not 100% familiar with its software and communication styles, it is something that I am learning in this class. Another problem was that I could not use the DHT11, however, after looking at the datasheet of the DHT11, I found that the only major difference technically between my two devices was that the DHT was more expensive and had a measuring supply current of 980 µW instead of 220 µW. This will require me to design the voltage and current supply accordingly by using a low-dropout (LDO) regulator or a buck converter to provide a stable 3.3V supply from the main power source.
 Additionally, I will verify that the power rail can supply at least the maximum operating current of the sensor, accounting for any potential inrush currents. A current-limiting resistor or a precision power supply with current regulation can help prevent overcurrent damage. Finally, I will confirm proper voltage levels using a multimeter and check signal integrity with an oscilloscope if necessary.</p>
 <p><strong>Error Checking &amp; Pin Availability</strong></p>
-<p><strong>Enough Pins?</strong> Yes, the ESP32 has sufficient GPIOs to accommodate all necessary peripherals.</p>
+<p><strong>Enough Pins?</strong> Yes, the PIC has sufficient GPIOs to accommodate all necessary peripherals.</p>
 <p><strong>Conflicts?</strong> I2C and UART do not share pins, ensuring proper communication.</p>
-<p><strong>Power Requirements?</strong> The ESP32 provides 3.3V output, which matches the HDC1010YPAR’s voltage requirement.</p>
+<p><strong>Power Requirements?</strong> The PIC accepts 3.3V input, which matches the HDC1010YPAR’s voltage requirement.</p>
 <p><strong>Final Microcontroller Choice &amp; Rationale</strong></p>
-<p><strong>Microcontroller Selected:</strong> ESP32-S3-WROOM-1-N4</p>
+<p><strong>Microcontroller Selected:</strong> PIC18F47Q10</p>
 <p><strong>Rationale:</strong></p>
 <p><strong>Adequate I/O:</strong> Sufficient GPIOs to handle all peripherals.
-<strong>Wireless Capabilities:</strong> Includes Wi-Fi and Bluetooth, which could be useful for future expansion.
+<strong>Wireless Capabilities:</strong> n/a. My system was switched from using the esp32 to now PIC due to programming concerns.
 <strong>Low Power Consumption:</strong> Suitable for battery-powered weather monitoring applications.
 <strong>Strong Software Support:</strong> Compatible with ESP-IDF, Arduino, and MicroPython.
 <strong>Community and Documentation:</strong> Extensive online resources for troubleshooting and development.</p>
 <p><strong>Next Steps</strong></p>
-<p>Test I2C communication with the HDC1010YPAR sensor using ESP-IDF or Arduino.
+<p>Test I2C communication with the HDC1010YPAR sensor using PIC.
 Validate power supply stability using a multimeter.</p>
 
 
