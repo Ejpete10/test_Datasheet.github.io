@@ -519,13 +519,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-budget-calculation_1" class="md-nav__link">
-    Power Budget Calculation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#power-source-voltage-regulator-selection" class="md-nav__link">
     Power Source &amp; Voltage Regulator Selection
   </a>
@@ -666,13 +659,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#power-budget-calculation_1" class="md-nav__link">
-    Power Budget Calculation
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#power-source-voltage-regulator-selection" class="md-nav__link">
     Power Source &amp; Voltage Regulator Selection
   </a>
@@ -733,14 +719,14 @@ Part Name - Blue Micro LED® SMD LED</p>
 <p>Power: 40mW</p>
 <p>Package Size: 0603, 0805, 1206, etc.</p>
 <p>Colors Available: Red, Green, Blue, Yellow, White</p>
-<p>You can find more details and the datasheet <a href="https://s3-us-west-2.amazonaws.com/catsy.557/C18571.pdf">here</a> </p>
+<p>You can find more details and the datasheet <a href="https://s3-us-west-2.amazonaws.com/catsy.557/C18571.pdf">here</a> .</p>
 <p><a href="https://www.digikey.com/en/product-highlight/d/dialight/microled-surface-mount-leds">Product link</a></p>
-<p>If you wish to view the whole BOM you may visit the link to my BOM spreadsheet: <a href="https://docs.google.com/spreadsheets/d/1XDYP-75lMF53_pUxz10kB5wWfIxgC6Pn/edit?gid=1046845005#gid=1046845005">BOM</a></p>
+<p>If you wish to view the whole BOM you may visit the link to my BOM spreadsheet: <a href="https://docs.google.com/spreadsheets/d/1XDYP-75lMF53_pUxz10kB5wWfIxgC6Pn/edit?gid=1046845005#gid=1046845005">BOM</a>.</p>
 <hr />
 <h2 id="part-2-microcontroller-pin-allocation">Part 2. Microcontroller Pin Allocation</h2>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/30d6df6f-e6e0-4e7c-b0bc-4bab29c253eb" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 230141" src="https://github.com/user-attachments/assets/30d6df6f-e6e0-4e7c-b0bc-4bab29c253eb" /></a></p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/91ae99d7-4bb5-48ee-95ca-16be8f68d097" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 230214" src="https://github.com/user-attachments/assets/91ae99d7-4bb5-48ee-95ca-16be8f68d097" /></a></p>
-<p>It may be helpful to go to view the pin layout on schematic if you wish <a href="https://ejpete10.github.io/test_Datasheet.github.io/Schematic%20Design/">Layout</a></p>
+<p>It may be helpful to go to view the pin layout on schematic if you wish <a href="https://ejpete10.github.io/test_Datasheet.github.io/Schematic%20Design/">Layout</a>.</p>
 <p>I previously selected esp32 but now I switched to PIC, here is the following information regarding the PIC.</p>
 <table>
 <thead>
@@ -890,29 +876,6 @@ Validate power supply stability using a multimeter.</p>
 <hr />
 <h2 id="power-budget-calculation">Power Budget Calculation</h2>
 <p>I have a total of two major components I will be working with, the microcontroller and the sensor that consume the most power. However I have attempted at including other components that may consume power to run the current through.</p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/97968700-18be-4505-bd22-55d73a4538d9" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 223414" src="https://github.com/user-attachments/assets/97968700-18be-4505-bd22-55d73a4538d9" /></a></p>
-<hr />
-<h2 id="section-b-assigning-my-components-to-a-power-rail">Section B assigning my components to a power rail.</h2>
-<p>For my components they will all be running off of 3.3V. The only part that will not is the female to male headers in the daisy chain which do not necessarily consume power, they will run off of the 9V power line which is shared across the team. So yes, all of my major components are 3.3V power rail due to the safety margin of 25% I will need a fuse of around 200mA. This may be seen in the schematic. </p>
-<p><a class="glightbox" href="https://github.com/user-attachments/assets/8ccaf36d-c60b-4480-96c6-120cf6a77d60" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 223938" src="https://github.com/user-attachments/assets/8ccaf36d-c60b-4480-96c6-120cf6a77d60" /></a></p>
-<p>Image B fuse of 200mA to ensure that the PIC does not exceed maximum current. </p>
-<p>In the case of the humidity sensor, the amperage that is being sent around is what it means by the low amperage. In my design review I talked to a representative from microchip to ensure that my schematic will work given my components as I try to make a keen point about not frying any equipment. </p>
-<hr />
-<h2 id="section-c-the-power-regulator">Section C, The Power Regulator.</h2>
-<p>I will be using the AP63203WU-7 LDO, this is further explained in the power source and voltage regulator section. I had to go through multiple LDOs to ensure that I have something reliable. In my LAB that we did to find a 3.3V output using an LDO my classmates told me that I should not use that LDO because one it is not surface mount and two it is not a guaranteed 3.3V output. I need as close to 3.3V and something reliable that is surface mount for which is why I choose this component given the options. </p>
-<hr />
-<h2 id="section-d-the-external-power-supply">Section D, the external power supply.</h2>
-<p>In a past project I also needed a 9V power supply to then regulate for whatever voltage I needed to power my component. I used the peralta labs #0930 9V unregulated power supply. I can then plug this into its 694108301002 Wurth Electronics, which has 5.5mm outer diameter and 2.5mm inner diameter barrel connector.</p>
-<hr />
-<h2 id="final-microcontroller-selection-rationale">Final Microcontroller Selection &amp; Rationale</h2>
-<p>The PIC18F47Q10 is optimal due to its low power consumption, industrial reliability, and robust GPIO options. This selection ensures reliable performance and efficient integration with all sensors and peripherals. It is also highly compatible for the sensor part of the team’s circuit. Due to the I2C communication, it may communicate with the PIC18F47Q10 and carry the same voltage 3.3V. I would need to use pull-up resistors around some parts of the sensor and ensure correct amperage using these sensors as well. </p>
-<hr />
-<h2 id="further-commentary-regarding-the-compatibility-of-the-pic-to-be-used-to-program-my-system">Further Commentary regarding the compatibility of the PIC to be used to program my system.</h2>
-<p>When I began my research on trying to find a suitable project for this class, I run across this: 
-https://srituhobby.com/how-to-make-a-weather-monitoring-system-with-esp32-board/.</p>
-<p>Although this project emphasis the use of the esp32 board, I can still prgram the sensor with the pic and allow a teammate to use a esp32 to then read the information it is sending off, due to this, I wanted to ensure that the information that my board receives will be able to be sent off to the necessary team member, in this case Sanjit who is working on the HMI. This is why I  initially wanted to use the esp32 board but due to fulfilling the requirements of this project, I decided to take one for the team and use the PIC in order for us to use a PIC in this project. I can use I2C to read the data and then UART to send or a GPIO for my teammates to also attach to my system as needed, this PIC still does the job either way. The wifi and bluetooth I will leave to a teammate while ensuring they may access my information of the PIC. I will now also ensure that when I send in my BOM that I order extra PICs in case mine does not work for any reason, the BOM is linked in this document as well if you wish to access it.</p>
-<hr />
-<h2 id="power-budget-calculation_1">Power Budget Calculation</h2>
 <table>
 <thead>
 <tr>
@@ -961,6 +924,26 @@ https://srituhobby.com/how-to-make-a-weather-monitoring-system-with-esp32-board/
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="section-b-assigning-my-components-to-a-power-rail">Section B assigning my components to a power rail.</h2>
+<p>For my components they will all be running off of 3.3V. The only part that will not is the female to male headers in the daisy chain which do not necessarily consume power, they will run off of the 9V power line which is shared across the team. So yes, all of my major components are 3.3V power rail due to the safety margin of 25% I will need a fuse of around 200mA. This may be seen in the schematic. </p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/8ccaf36d-c60b-4480-96c6-120cf6a77d60" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 223938" src="https://github.com/user-attachments/assets/8ccaf36d-c60b-4480-96c6-120cf6a77d60" /></a></p>
+<p>Image B fuse of 200mA to ensure that the PIC does not exceed maximum current. </p>
+<p>In the case of the humidity sensor, the amperage that is being sent around is what it means by the low amperage. In my design review I talked to a representative from microchip to ensure that my schematic will work given my components as I try to make a keen point about not frying any equipment. </p>
+<hr />
+<h2 id="section-c-the-power-regulator">Section C, The Power Regulator.</h2>
+<p>I will be using the AP63203WU-7 LDO, this is further explained in the power source and voltage regulator section. I had to go through multiple LDOs to ensure that I have something reliable. In my LAB that we did to find a 3.3V output using an LDO my classmates told me that I should not use that LDO because one it is not surface mount and two it is not a guaranteed 3.3V output. I need as close to 3.3V and something reliable that is surface mount for which is why I choose this component given the options. </p>
+<hr />
+<h2 id="section-d-the-external-power-supply">Section D, the external power supply.</h2>
+<p>In a past project I also needed a 9V power supply to then regulate for whatever voltage I needed to power my component. I used the peralta labs #0930 9V unregulated power supply. I can then plug this into its 694108301002 Wurth Electronics, which has 5.5mm outer diameter and 2.5mm inner diameter barrel connector.</p>
+<hr />
+<h2 id="final-microcontroller-selection-rationale">Final Microcontroller Selection &amp; Rationale</h2>
+<p>The PIC18F47Q10 is optimal due to its low power consumption, industrial reliability, and robust GPIO options. This selection ensures reliable performance and efficient integration with all sensors and peripherals. It is also highly compatible for the sensor part of the team’s circuit. Due to the I2C communication, it may communicate with the PIC18F47Q10 and carry the same voltage 3.3V. I would need to use pull-up resistors around some parts of the sensor and ensure correct amperage using these sensors as well. </p>
+<hr />
+<h2 id="further-commentary-regarding-the-compatibility-of-the-pic-to-be-used-to-program-my-system">Further Commentary regarding the compatibility of the PIC to be used to program my system.</h2>
+<p>When I began my research on trying to find a suitable project for this class, I run across this: 
+https://srituhobby.com/how-to-make-a-weather-monitoring-system-with-esp32-board/.</p>
+<p>Although this project emphasis the use of the esp32 board, I can still prgram the sensor with the pic and allow a teammate to use a esp32 to then read the information it is sending off, due to this, I wanted to ensure that the information that my board receives will be able to be sent off to the necessary team member, in this case Sanjit who is working on the HMI. This is why I  initially wanted to use the esp32 board but due to fulfilling the requirements of this project, I decided to take one for the team and use the PIC in order for us to use a PIC in this project. I can use I2C to read the data and then UART to send or a GPIO for my teammates to also attach to my system as needed, this PIC still does the job either way. The wifi and bluetooth I will leave to a teammate while ensuring they may access my information of the PIC. I will now also ensure that when I send in my BOM that I order extra PICs in case mine does not work for any reason, the BOM is linked in this document as well if you wish to access it.</p>
 <hr />
 <h2 id="power-source-voltage-regulator-selection">Power Source &amp; Voltage Regulator Selection</h2>
 <p>I need to ensure that this part receives the correct amperage. Due to the team planning to use 5V instead of 3.3V for this side of the circuit we then have two choices. These choices are to either use 3.3V for the whole board or to use an LDO, since it is a minimal change of 1.7V we hope that this LDO regulator may work in reducing the voltage running through my devices. I will have to construct a circuit that regulates the voltage similar to the voltage regulator lab we finished in class.</p>
