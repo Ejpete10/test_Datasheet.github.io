@@ -511,6 +511,101 @@
 The system uses the PIC microcontroller and regulates the 9V using an LDO and a switch to start the device up.
 It is the individual susbsystem, but in the future will need to use the same power source to charge other teamates systems.
 The PCB will be made to be compact with surface mount applications being the focus of this design. I also had to ensure that the surface mount chips were not too small to be used in the design due to the needs to place them down onto the actual pcb.</p>
+<p>Download PDF: <a href="https://github.com/user-attachments/files/19037395/Schematic_Design_308Ethan.pdf">Schematic_Design_308Ethan.pdf</a>
+<a href="">Uploading Schematic_Design_308Ethan.PrjPcb…</a></p>
+<p>Download Project: <a href="https://github.com/user-attachments/files/19037401/Project.zip">Project.zip</a></p>
+<table>
+<thead>
+<tr>
+<th>Component- Componet Name</th>
+<th>Voltage Range (V)</th>
+<th>Typical Voltage (V)</th>
+<th>Max Current (mA)</th>
+<th>Power (mW)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Microcontroller - PIC18F47Q10</td>
+<td>2.3V-5.5V</td>
+<td>3.3V</td>
+<td>250mA</td>
+<td>825mW</td>
+</tr>
+<tr>
+<td>Blue surface mount LED - 597-6602-107F</td>
+<td>2.8V - 3.6V</td>
+<td>3.3V</td>
+<td>125mA</td>
+<td>108mW</td>
+</tr>
+<tr>
+<td>Switch - B3U-1000P</td>
+<td>0-24 VDC</td>
+<td>0-24 V DC</td>
+<td>50 mA</td>
+<td>165mW</td>
+</tr>
+<tr>
+<td>Humidity Sensor - HDC1010YPAR</td>
+<td>2.7V - 5.5V</td>
+<td>3.3V</td>
+<td>20mA</td>
+<td>66mW</td>
+</tr>
+<tr>
+<td><strong>Total (maximum) Power Consumption</strong></td>
+<td>-</td>
+<td>3.3V</td>
+<td>240mA</td>
+<td>1164mW</td>
+</tr>
+</tbody>
+</table>
+<p>All these components use the 3.3V power rail, with currents listed above</p>
+<p>External Power Source</p>
+<table>
+<thead>
+<tr>
+<th>Component- Componet Name</th>
+<th>Supply Voltage</th>
+<th>Output voltage</th>
+<th>Max Current (mA)</th>
+<th>Total current (mW)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>9V power - #0930 Peralta labs</td>
+<td>Wall 120V</td>
+<td>9V</td>
+<td>5000</td>
+<td>50000</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3.3V regulator AMS1117-3.3V</td>
+<td>9V</td>
+<td>3.3V</td>
+<td>2000</td>
+<td>2000</td>
+</tr>
+</tbody>
+</table>
+<p>The power budget has helped to estimate power needs by allowing us to use the correct fuses and to use the appropriate LDO to regulate voltage</p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/f0e1eccb-152e-43f5-8203-a0a542bfda6f" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-02-28 194323" src="https://github.com/user-attachments/assets/f0e1eccb-152e-43f5-8203-a0a542bfda6f" /></a></p>
 
 
