@@ -558,8 +558,6 @@
 </tr>
 </tbody>
 </table>
-<p>Final Microcontroller Selection &amp; Rationale</p>
-<p>The PIC18F47Q10 is optimal due to its low power consumption, industrial reliability, and robust GPIO options. This selection ensures reliable performance and efficient integration with all sensors and peripherals. It is also highly compatible for the sensor part of the team’s circuit. Due to the I2C communication, it may communicate with the PIC18F47Q10 and carry the same voltage 3.3V. I would need to use pull-up resistors around some parts of the sensor and ensure correct amperage using these sensors as well.</p>
 <p>Power Source &amp; Voltage Regulator Selection</p>
 <p>I need to ensure that this part receives the correct amperage. Due to the team planning to use 5V instead of 3.3V for this side of the circuit we then have two choices. These choices are to either use 3.3V for the whole board or to use an LDO, since it is a minimal change of 1.7V we hope that this LDO regulator may work in reducing the voltage running through my devices. I will have to construct a circuit that regualates the voltage similar to the voltage regulator lab we finished in class.
 | Solution                        | Pros                                      | Cons                              |
@@ -569,10 +567,11 @@
 |                                 |                                           |                       |
 | Switching Regulator         |                                         |                                       |
 | LM2596-3.3V                 |  High efficiency, Low heat generation |  Bulkier, Requires additional components  |
-| AP63203WU-7                 |  Outputs exactly 3.3V, Surface mount, High efficiency |  Requires precise PCB layout  |</p>
+| AP63203WU-7                 |  Outputs exactly 3.3V, Surface mount, High efficiency | Higher heat dissipation, complex/multiple parts on connection schematic |</p>
 <p>Rationale: The AP63203WU-7 was chosen for its precise 3.3V output, surface-mount form factor, and high efficiency, making it ideal for this embedded system.</p>
 <p><strong>Conclusion</strong>
 This component selection ensures an efficient, low-power, and scalable design for a weather monitoring system using a PIC18F47Q10 and HDC1010YPAR temperature and humidity sensor.</p>
+<p>No battery is included in this system, it will be a direct connection.</p>
 
 
 
