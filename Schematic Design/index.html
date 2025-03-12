@@ -549,10 +549,11 @@ It is the individual susbsystem, but in the future will need to use the same pow
 The PCB will be made to be compact with surface mount applications being the focus of this design. I also had to ensure that the surface mount chips were not too small to be used in the design due to the needs to place them down onto the actual pcb.</p>
 <p>Download PDF: <a href="https://docs.google.com/document/d/1R_pSA_grRBiEOySVnYVTawVCs2YtuYDbptRplWQcUcs/edit?tab=t.0">Schematic_Design_308Ethan.pdf</a></p>
 <p>Download Project: <a href="https://github.com/user-attachments/files/19198007/Project.Ethan.JP.zip">Project Ethan JP.zip</a></p>
+<p>Power Budget Calculation</p>
 <table>
 <thead>
 <tr>
-<th>Component- Componet Name</th>
+<th>Component</th>
 <th>Voltage Range (V)</th>
 <th>Typical Voltage (V)</th>
 <th>Max Current (mA)</th>
@@ -561,32 +562,32 @@ The PCB will be made to be compact with surface mount applications being the foc
 </thead>
 <tbody>
 <tr>
-<td>Microcontroller - PIC18F47Q10</td>
-<td>2.3V-5.5V</td>
+<td>PIC18F47Q10-I/P</td>
+<td>1.5-5.5V</td>
 <td>3.3V</td>
 <td>250mA</td>
 <td>825mW</td>
 </tr>
 <tr>
-<td>White surface mount LED - 597-6602-107F</td>
-<td>2.8V - 3.6V</td>
-<td>3.3V</td>
-<td>125mA</td>
-<td>108mW</td>
+<td>Blue surface mount LED</td>
+<td>1.87V - 3.0V</td>
+<td>(3.0)</td>
+<td>2A (will run &lt;300mA)</td>
+<td>0.9W</td>
 </tr>
 <tr>
-<td>Switch - B3U-1000P</td>
+<td>B3U-1000P Switch</td>
 <td>0-24 VDC</td>
 <td>0-24 V DC</td>
 <td>50 mA</td>
 <td>165mW</td>
 </tr>
 <tr>
-<td>Humidity Sensor - HDC2080DMBR</td>
-<td>2.7V - 5.5V</td>
+<td>HDC2080DMBR</td>
+<td>1.62V - 3.6V</td>
 <td>3.3V</td>
-<td>20mA</td>
-<td>66mW</td>
+<td>550nA</td>
+<td>1.815mW</td>
 </tr>
 <tr>
 <td><strong>Total (maximum) Power Consumption</strong></td>
