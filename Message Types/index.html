@@ -12,13 +12,13 @@
       
       
       
-        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Datasheet/">
+        <link rel="canonical" href="https://embedded-systems-design.github.io/template_report/Message%20Types/">
       
       
-        <link rel="prev" href="../Component%20selection/">
+        <link rel="prev" href="../Datasheet/">
       
       
-        <link rel="next" href="../Message%20Types/">
+        <link rel="next" href="../Power%20Budget/">
       
       
       <link rel="icon" href="../static/logo.png">
@@ -29,7 +29,7 @@
 
     
       
-        <title>Datasheet - EGR314 Team 308; Ethan Peterson Individual Repository</title>
+        <title>Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor - EGR314 Team 308; Ethan Peterson Individual Repository</title>
       
     
     
@@ -92,6 +92,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#sensor-message-types-for-pic18f47q10t-ipt-with-hdc2080-sensor" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -123,7 +128,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Datasheet
+              Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor
             
           </span>
         </div>
@@ -263,11 +268,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../Datasheet/" class="md-tabs__link">
         
   
     
@@ -282,9 +285,11 @@
         
   
   
+    
   
-    <li class="md-tabs__item">
-      <a href="../Message%20Types/" class="md-tabs__link">
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
         
   
     
@@ -460,16 +465,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Datasheet/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +476,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -487,9 +484,29 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Message%20Types/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -498,6 +515,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transmit-information-temperature-and-humidity" class="md-nav__link">
+    Transmit Information: Temperature and Humidity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-information-temperature-and-humidity" class="md-nav__link">
+    Process Information: Temperature and Humidity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incoming-request-temperature-and-humidity" class="md-nav__link">
+    Incoming Request: Temperature and Humidity
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -557,6 +615,37 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#transmit-information-temperature-and-humidity" class="md-nav__link">
+    Transmit Information: Temperature and Humidity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#process-information-temperature-and-humidity" class="md-nav__link">
+    Process Information: Temperature and Humidity
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#incoming-request-temperature-and-humidity" class="md-nav__link">
+    Incoming Request: Temperature and Humidity
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -571,7 +660,7 @@
                   
 
   
-    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Datasheet.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/embedded-systems-design/template_report/edit/main/docs/Message Types.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -579,30 +668,124 @@
   
 
 
-  <h1>Datasheet</h1>
-
-<p>Please view all Datasheets using the BOM. We have the component name and every detail needed to view your requested Item and see the datasheets.
-Here is a link to the BOM where you will find all requested items. Datasheets are on column M. </p>
-<p><a href="https://docs.google.com/spreadsheets/d/1XDYP-75lMF53_pUxz10kB5wWfIxgC6Pn/edit?gid=1046845005#gid=1046845005">BOM</a></p>
-<p><a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/MIDC/MIDC-S-A0001192814/MIDC-S-A0001192814-1.pdf?src-supplier=IHS+Markit">694108301002 Through hole plug in power source</a></p>
-<p><a href="https://datasheet.ciiva.com/pdfs/VipMasterIC/IC/TDKC/TDKC-S-A0008953915/TDKC-S-A0008953915-1.pdf?src-supplier=IHS+Markit">C1206C104K5RACTU - 100nF Cap 3mm</a></p>
-<p><a href="https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM31CR61A106KA01-01.pdf">GRM31CR61A106KA01L 3mm</a></p>
-<p><a href="https://octopart.com/datasheet/grm21br60j226me39l-murata-196432">GRM21BR61C106KE15L - SM 22 uF Cap 3mm</a></p>
-<p><a href="https://www.alldatasheet.com/datasheet-pdf/pdf/528105/AD/M20-9990246.html">M20-9990246 header pins</a></p>
-<p><a href="https://www.littelfuse.com/assetdocs/littelfuse-fuse-154-series-data-sheet?assetguid=a8a8a462-7295-481b-a91b-d770dabf005b">FUSE-2A/32V-3 - 2A fuse</a></p>
-<p><a href="https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf">RC1206FR-0710KL - 3mm wide resistor</a></p>
-<p><a href="https://www.mouser.com/datasheet/2/87/eaton_corporation_bus_elx_ds_2017_gma_series-1160518.pdf">0154002.DR - 200mA fuse</a></p>
-<p><a href="https://octopart.com/datasheet/28630806rp2-norcomp-248002">1x8 28630806RP2</a></p>
-<p><a href="https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/PIC18F27-47Q10-Micorcontroller-Data-Sheet-DS40002043.pdf">PIC18F47Q10-I/P</a></p>
-<p><a href="https://www.diodes.com/assets/Datasheets/AP63200-AP63201-AP63203-AP63205.pdf">LDO - AP63203WU-7 (SM)</a></p>
-<p><a href="https://www.keyelco.com/userAssets/file/M65p56.pdf">5004 - Test Point</a></p>
-<p><a href="https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf">RC1206FR-071KL 3mm</a></p>
-<p><a href="https://www.onsemi.com/pdf/datasheet/bat54ht1-d.pdf">BAT54HT1G - Diode</a></p>
-<p><a href="https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fhdc1010">HDC1010YPAR - Sensor</a></p>
-<p><a href="https://s3-us-west-2.amazonaws.com/catsy.557/C18571.pdf">597-6602-107F (Blue LED) (SM)</a></p>
-<p><a href="https://mm.digikey.com/Volume0/opasdata/d220001/medias/docus/610/NR6028T4R7M_SS.pdf">NR6028T4R7M - Inductor</a></p>
-<p><a href="https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3u.pdf">B3U-1000P - Switch</a></p>
-<p><a href="https://www.we-online.com/components/products/datasheet/6130xx11821.pdf">61301011821</a></p>
+<h1 id="sensor-message-types-for-pic18f47q10t-ipt-with-hdc2080-sensor">Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor</h1>
+<h2 id="transmit-information-temperature-and-humidity">Transmit Information: Temperature and Humidity</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Variable Name</strong></th>
+<th><strong>Variable Type</strong></th>
+<th><strong>Min Value</strong></th>
+<th><strong>Max Value</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Byte #</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperature</td>
+<td>Float</td>
+<td>-40°C</td>
+<td>85°C</td>
+<td>25.5°C</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Humidity</td>
+<td>Float</td>
+<td>0% RH</td>
+<td>100% RH</td>
+<td>38.9% RH</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Status/Error Code</td>
+<td>Integer</td>
+<td>0.0</td>
+<td>255.0</td>
+<td>0 (No error)</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="process-information-temperature-and-humidity">Process Information: Temperature and Humidity</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Variable Name</strong></th>
+<th><strong>Variable Type</strong></th>
+<th><strong>Min Value</strong></th>
+<th><strong>Max Value</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Byte #</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Temperature Input</td>
+<td>Float</td>
+<td>-40°C</td>
+<td>85°C</td>
+<td>22.8°C</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Humidity Input</td>
+<td>Float</td>
+<td>0% RH</td>
+<td>100% RH</td>
+<td>67.2% RH</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Processed Output</td>
+<td>Float</td>
+<td>-40°C</td>
+<td>85°C</td>
+<td>23.0°C</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="incoming-request-temperature-and-humidity">Incoming Request: Temperature and Humidity</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Variable Name</strong></th>
+<th><strong>Variable Type</strong></th>
+<th><strong>Min Value</strong></th>
+<th><strong>Max Value</strong></th>
+<th><strong>Example</strong></th>
+<th><strong>Byte #</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Request Type</td>
+<td>Integer</td>
+<td>0.0</td>
+<td>255.0</td>
+<td>1 (Request)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Temperature Request</td>
+<td>Float</td>
+<td>-40°C</td>
+<td>85°C</td>
+<td>20.0°C</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Humidity Request</td>
+<td>Float</td>
+<td>0% RH</td>
+<td>100% RH</td>
+<td>60.0% RH</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -630,7 +813,7 @@ Here is a link to the BOM where you will find all requested items. Datasheets ar
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../Component%20selection/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Component selection" rel="prev">
+          <a href="../Datasheet/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Datasheet" rel="prev">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -640,20 +823,20 @@ Here is a link to the BOM where you will find all requested items. Datasheets ar
                 Previous
               </span>
               <div class="md-ellipsis">
-                Component selection
+                Datasheet
               </div>
             </div>
           </a>
         
         
           
-          <a href="../Message%20Types/" class="md-footer__link md-footer__link--next" aria-label="Next: Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor" rel="next">
+          <a href="../Power%20Budget/" class="md-footer__link md-footer__link--next" aria-label="Next: Power Budget Overview for Sensor" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Sensor Message Types for PIC18F47Q10T-I/PT with HDC2080 Sensor
+                Power Budget Overview for Sensor
               </div>
             </div>
             <div class="md-footer__button md-icon">
