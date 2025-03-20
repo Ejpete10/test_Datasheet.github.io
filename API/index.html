@@ -684,7 +684,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Temperature</td>
+<td>Send Temperature</td>
 <td>Float</td>
 <td>-40°C</td>
 <td>85°C</td>
@@ -692,7 +692,7 @@
 <td>2</td>
 </tr>
 <tr>
-<td>Humidity</td>
+<td>Send Humidity</td>
 <td>Float</td>
 <td>0% RH</td>
 <td>100% RH</td>
@@ -700,7 +700,7 @@
 <td>2</td>
 </tr>
 <tr>
-<td>Status/Error Code</td>
+<td>Send Status/Error Code</td>
 <td>Integer</td>
 <td>0.0</td>
 <td>255.0</td>
@@ -723,7 +723,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Temperature Input</td>
+<td>Process Temperature Input</td>
 <td>Float</td>
 <td>-40°C</td>
 <td>85°C</td>
@@ -731,7 +731,7 @@
 <td>2</td>
 </tr>
 <tr>
-<td>Humidity Input</td>
+<td>Process Humidity Input</td>
 <td>Float</td>
 <td>0% RH</td>
 <td>100% RH</td>
@@ -739,7 +739,7 @@
 <td>2</td>
 </tr>
 <tr>
-<td>Processed Output</td>
+<td>Process Processed Output</td>
 <td>Float</td>
 <td>-40°C</td>
 <td>85°C</td>
@@ -762,7 +762,7 @@
 </thead>
 <tbody>
 <tr>
-<td>Request Type</td>
+<td>Receive Request Type</td>
 <td>Integer</td>
 <td>0.0</td>
 <td>255.0</td>
@@ -770,7 +770,7 @@
 <td>1</td>
 </tr>
 <tr>
-<td>Temperature Request</td>
+<td>Receive Temperature Request</td>
 <td>Float</td>
 <td>-40°C</td>
 <td>85°C</td>
@@ -778,7 +778,7 @@
 <td>2</td>
 </tr>
 <tr>
-<td>Humidity Request</td>
+<td>Receive Humidity Request</td>
 <td>Float</td>
 <td>0% RH</td>
 <td>100% RH</td>
@@ -787,6 +787,13 @@
 </tr>
 </tbody>
 </table>
+<h1 id="these-are-the-messages-that-were-deemed-necessary-for-the-humidity-and-temperature-sensor">These are the messages that were deemed necessary for the humidity and temperature sensor</h1>
+<p>As seen below the teams communication sequence diagram, we may view the teams process for communicating in various different methods to reach our objective of allowing a user to read humidity, temperature, water flow rate and speed.</p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/96821e97-3e54-4285-99f0-416ede6ef058" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/96821e97-3e54-4285-99f0-416ede6ef058" /></a></p>
+<h1 id="humidity-and-temperature-sensor-responsibilities">Humidity and temperature sensor responsibilities</h1>
+<p><strong>RECEIVE - Incoming Request: Temperature and Humidity</strong> - This is when a user initiates the system, asks temperature, humidity, or water speed or flow rate through the device. </p>
+<p><strong>ACT ON - Process Information: Temperature and Humidity</strong> - This is when the sensors go through their code to seek what they are capable of sensing. In my case the HDC2080 seeks out temperature and humidity through I2C data and clock capabilities. </p>
+<p><strong>SEND -Transmit Information: Temperature and Humidity</strong> - The final respocibility of the HDC2080 is to communicate the end process with the HMI so that it may be inserted into their code for processing and to be displayed to the user. </p>
 
 
 
