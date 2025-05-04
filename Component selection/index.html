@@ -1070,7 +1070,7 @@ Validate power supply stability using a multimeter.</p>
 <td>165mW</td>
 </tr>
 <tr>
-<td>HDC1010YPAR</td>
+<td>AHT21</td>
 <td>2.7V - 5.5V</td>
 <td>3.3V</td>
 <td>20mA</td>
@@ -1085,6 +1085,8 @@ Validate power supply stability using a multimeter.</p>
 </tr>
 </tbody>
 </table>
+<p><strong>How I used the power budget to estimate power needs and any other conclusions</strong></p>
+<p>I had to ensure that the 9V input from the barrel jack was sufficiently regulated by the APY voltage regulator. The sensor only delivers the correct serial data when it receives the proper voltage on Vin, and the microcontroller functions as intended—without risk of damage—only if it is precisely 3.3V. In practice, when either the sensor or the PIC18F47Q10 was not exactly 3.3V, we encountered problems.</p>
 <hr />
 <h2 id="section-b-assigning-my-components-to-a-power-rail">Section B assigning my components to a power rail.</h2>
 <p>For my components they will all be running off of 3.3V. The only part that will not is the female to male headers in the daisy chain which do not necessarily consume power, they will run off of the 9V power line which is shared across the team. So yes, all of my major components are 3.3V power rail due to the safety margin of 25% I will need a fuse of around 200mA. This may be seen in the schematic. </p>
