@@ -456,6 +456,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-member-roles" class="md-nav__link">
+    Team Member Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#transmit-information-temperature-and-humidity" class="md-nav__link">
     Transmit Information: Temperature and Humidity
   </a>
@@ -625,6 +639,20 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#team-member-roles" class="md-nav__link">
+    Team Member Roles
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#messages" class="md-nav__link">
+    Messages
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#transmit-information-temperature-and-humidity" class="md-nav__link">
     Transmit Information: Temperature and Humidity
   </a>
@@ -670,8 +698,70 @@
 
 <h1 id="api">API</h1>
 <p>This page discusses the sensor's message types</p>
-<p>My letter designator - L</p>
-<p>PIC18F47Q10T-I/PT with HDC2080DMBR Sensor - <a href="https://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=https%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fhdc2080">Datasheet</a></p>
+<h2 id="team-member-roles">Team Member Roles</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Team Member</strong></th>
+<th><strong>Role</strong></th>
+<th><strong>Character ID</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Siddhant</td>
+<td>Motor Subsystem</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Ethan</td>
+<td>Sensor Subsystem</td>
+<td>E</td>
+</tr>
+<tr>
+<td>Kevin</td>
+<td>HMI Subsystem</td>
+<td>K</td>
+</tr>
+<tr>
+<td>Sanjit</td>
+<td>Web Subsystem</td>
+<td>T</td>
+</tr>
+</tbody>
+</table>
+<p>PIC18F47Q10T-I/PT with AHT21 Sensor - <a href="https://pdf.directindustry.com/pdf/aosong-electronics-co-ltd/data-sheet-aht21/121567-1002931.html">Here</a></p>
+<h2 id="messages">Messages</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Message ID</strong></th>
+<th><strong>Sender</strong></th>
+<th><strong>Recipient</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FSEK00FS</code></td>
+<td>Ethan</td>
+<td>Kevin</td>
+<td>Temperature message (<code>00</code> = temperature)</td>
+</tr>
+<tr>
+<td><code>FSET00FS</code></td>
+<td>Ethan</td>
+<td>Sanjit</td>
+<td>Temperature message (<code>00</code> = temperature)</td>
+</tr>
+<tr>
+<td><code>FSES00FS</code></td>
+<td>Ethan</td>
+<td>Siddhant</td>
+<td>Temperature message (<code>00</code> = temperature)</td>
+</tr>
+</tbody>
+</table>
 <h2 id="transmit-information-temperature-and-humidity">Transmit Information: Temperature and Humidity</h2>
 <table>
 <thead>
