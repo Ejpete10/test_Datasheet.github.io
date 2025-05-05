@@ -90,6 +90,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#teams-final-pcb-design" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -524,6 +529,17 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Schematic Desgin
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -533,6 +549,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teams-final-pcb-design" class="md-nav__link">
+    Teams Final PCB design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-my-individual-design-sensor-satisfy-user-needs-and-product-requirements-using-in-depth-discussion" class="md-nav__link">
+    How does my individual design (sensor) satisfy user needs and product requirements using in depth discussion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altium" class="md-nav__link">
+    Altium
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -555,6 +609,35 @@
   
   
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#teams-final-pcb-design" class="md-nav__link">
+    Teams Final PCB design
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-does-my-individual-design-sensor-satisfy-user-needs-and-product-requirements-using-in-depth-discussion" class="md-nav__link">
+    How does my individual design (sensor) satisfy user needs and product requirements using in depth discussion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altium" class="md-nav__link">
+    Altium
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -585,55 +668,9 @@ It is the individual susbsystem, but in the future will need to use the same pow
 The PCB will be made to be compact with surface mount applications being the focus of this design. I also had to ensure that the surface mount chips were not too small to be used in the design due to the needs to place them down onto the actual pcb.</p>
 <p>Download PDF: <a href="https://docs.google.com/document/d/1R_pSA_grRBiEOySVnYVTawVCs2YtuYDbptRplWQcUcs/edit?tab=t.0">Schematic_Design_308Ethan.pdf</a></p>
 <p>Download Project: <a href="https://github.com/user-attachments/files/19198007/Project.Ethan.JP.zip">Project Ethan JP.zip</a></p>
-<p>Power Budget Calculation</p>
-<table>
-<thead>
-<tr>
-<th>Component</th>
-<th>Voltage Range (V)</th>
-<th>Typical Voltage (V)</th>
-<th>Max Current (mA)</th>
-<th>Power (mW)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>PIC18F47Q10-I/P</td>
-<td>1.5-5.5V</td>
-<td>3.3V</td>
-<td>250mA</td>
-<td>825mW</td>
-</tr>
-<tr>
-<td>Blue surface mount LED</td>
-<td>1.87V - 3.0V</td>
-<td>(3.0)</td>
-<td>2A (will run &lt;300mA)</td>
-<td>0.9W</td>
-</tr>
-<tr>
-<td>B3U-1000P Switch</td>
-<td>0-24 VDC</td>
-<td>0-24 V DC</td>
-<td>50 mA</td>
-<td>165mW</td>
-</tr>
-<tr>
-<td>HDC2080DMBR</td>
-<td>1.62V - 3.6V</td>
-<td>3.3V</td>
-<td>550nA</td>
-<td>1.815mW</td>
-</tr>
-<tr>
-<td><strong>Total (maximum) Power Consumption</strong></td>
-<td>-</td>
-<td>3.3V</td>
-<td>240mA</td>
-<td>1164mW</td>
-</tr>
-</tbody>
-</table>
+<p>View the power budget or component selection to examine the BOM or voltage distribution for this design.
+The BOM: <a href="https://docs.google.com/spreadsheets/d/1XDYP-75lMF53_pUxz10kB5wWfIxgC6Pn/edit?gid=1046845005#gid=1046845005">Here</a>
+The Purchase Slip: <a href="https://docs.google.com/spreadsheets/d/1szL4_3IZWjw0e24ai2LgEwiDuFHJ5Ls0/edit?gid=1685898793#gid=1685898793">Here</a></p>
 <p>All these components use the 3.3V power rail, with currents listed above</p>
 <p>External Power Source</p>
 <table>
@@ -682,6 +719,38 @@ The PCB will be made to be compact with surface mount applications being the foc
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/aa48b9cc-4702-4269-acf3-b9b52e117ee5" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Screenshot 2025-03-11 093350" src="https://github.com/user-attachments/assets/aa48b9cc-4702-4269-acf3-b9b52e117ee5" /></a></p>
 <p><strong>PCB</strong> </p>
 <p><a class="glightbox" href="https://github.com/user-attachments/assets/e321084d-0bac-43e1-ab30-9426a3a80da0" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e321084d-0bac-43e1-ab30-9426a3a80da0" /></a></p>
+<p><strong>Final Prodcut PCB Printout Front and Back</strong></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/abe144e8-7049-4c0d-a957-43d244809811" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3903" src="https://github.com/user-attachments/assets/abe144e8-7049-4c0d-a957-43d244809811" /></a></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/cabb0cf0-cee1-46a7-9b2c-666d70504920" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="IMG_3904" src="https://github.com/user-attachments/assets/cabb0cf0-cee1-46a7-9b2c-666d70504920" /></a></p>
+<hr />
+<h2 id="teams-final-pcb-design"><strong>Teams Final PCB design</strong></h2>
+<p><strong>Internet</strong>
+<a class="glightbox" href="https://github.com/user-attachments/assets/d8cc0b0d-5415-4143-afde-b6ceb6444252" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/d8cc0b0d-5415-4143-afde-b6ceb6444252" /></a></p>
+<p><strong>Sensor</strong>
+<a class="glightbox" href="https://github.com/user-attachments/assets/b25837d6-d17e-4dfa-b05a-9b1cf3508820" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/b25837d6-d17e-4dfa-b05a-9b1cf3508820" /></a></p>
+<p><strong>HMI</strong>
+<a class="glightbox" href="https://github.com/user-attachments/assets/4483b70d-a024-4e62-96be-0379ea7bd6ea" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/4483b70d-a024-4e62-96be-0379ea7bd6ea" /></a></p>
+<p><strong>Motor Driver</strong>
+<a class="glightbox" href="https://github.com/user-attachments/assets/1fa9834f-f6fb-4cda-a1a4-d665376c2281" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/1fa9834f-f6fb-4cda-a1a4-d665376c2281" /></a></p>
+<hr />
+<h2 id="how-does-my-individual-design-sensor-satisfy-user-needs-and-product-requirements-using-in-depth-discussion"><strong>How does my individual design (sensor) satisfy user needs and product requirements using in depth discussion</strong></h2>
+<p>My sensor satisfies user needs by providing the foundation for the project. When a user from the MQTT server requests the current temperature, the sensor provides the data. It communicates via serial communication, which is coded to output the temperature in Celsius. If the customer requires the temperature in another format, such as Fahrenheit or displayed on an HMI, the data can be converted using an equation or routed through TX to the HMI accordingly.</p>
+<p>Specifically, the schematic ensures that each trace is properly assigned. This means that each clock line is routed directly to its required destination—the microcontroller, SNAP programmer, or serial sensor. The same applies to other types of signal lines. Additionally, it is crucial to control voltage backflow using diodes. When regulating voltage, I ensure it is exactly 3.3V, as any deviation could either damage components or cause them to malfunction due to insufficient voltage. Other critical elements, such as enable pins, are also powered correctly.</p>
+<p>One issue I had to focus on during testing was ensuring that specific components on my PCB were properly grounded. I discovered that my barrel jack was not actually connected to ground, despite being designed that way in my PCB layout. This highlighted the importance of understanding PCB debugging and performing proper fixes. It appeared that the barrel jack was not correctly connected to the copper layer that serves as ground.</p>
+<p>With these improvements, including sensor selection and optimization, the customer now has a working serial sensor that meets the class requirements—including compatibility with I2C and proper 3.3V operation.</p>
+<p><strong>Team's design and decision making process</strong></p>
+<p>For the sensor, we encountered a lot of problems, but we were able to fix all of them, ultimately achieving a full checkoff and a functioning data sender. Initially, the team observed that the HDC Texas Instruments sensor worked; however, after a voltage spike, it failed. As a result, we had to switch through three different types of sensors before settling on the AHT21.</p>
+<p>We first tried the DHT11, but it failed to send data because it was not I2C, and our microcontroller requires a clock. Next, we attempted to use the class-provided sensor, but it also did not work—I honestly don't know why, but it was likely a coding issue. Finally, we found the AHT21, which many Arduino users identified as user-friendly. We reached the same conclusion; it was easy to code, transmitted data smoothly, had a comprehensive datasheet, and operated at a voltage that matched the PIC18F47Q10’s requirements for proper functionality.</p>
+<p>For the PCB, I used my teammate’s design, which had the PIC working flawlessly. A drawback of my own PCB was the amount of noise present due to floating SNAP programmer traces, as well as issues with my voltage regulator. Specifically, my voltage regulator did not fully adhere to the datasheet—it was an equivalent circuit but had problems with the enable pin not sharing voltage in parallel with the Vin trace.</p>
+<p><strong>What would version 2.0 look like for this design</strong></p>
+<p><a class="glightbox" href="https://github.com/user-attachments/assets/e321084d-0bac-43e1-ab30-9426a3a80da0" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="image" src="https://github.com/user-attachments/assets/e321084d-0bac-43e1-ab30-9426a3a80da0" /></a></p>
+<p>For future projects, I need to stick to proven solutions and follow them strictly, ensuring I fully understand every aspect of the design before proceeding. Research is crucial, but so is avoiding unnecessary risks or improvisations that could lead to failure.</p>
+<p>The voltage regulator needs to be completely reworked. The schematic should match the design shown in the image exactly:</p>
+<p>During circuit assembly, I noticed that my PCB layout had several differences from the datasheet design. Even though Altium assisted in creating the layout, its automated trace linker should not have been followed blindly. Instead, I should have manually routed the traces to match the datasheet specifications.</p>
+<p>For example, in my PCB design, if you examine the voltage regulator pins, I routed a trace under the component twice—something not specified in the datasheet. The first instance was to link Vin and EN together, which should have been harmless. However, I supplied Vin first, then Enable, rather than vice versa. This may have prevented the voltage regulator from powering up correctly.</p>
+<p>The second mistake was routing the feedback trace directly to ground, which was a critical error that cost me hours of rework. According to the datasheet, feedback should have been connected after the inductor. Next time, I need to avoid such risks by strictly adhering to reference designs and verifying every detail before committing to a layout.</p>
+<hr />
+<h2 id="altium"><strong>Altium</strong></h2>
 <p><strong>Below is the Atium Export of these PDFs:</strong></p>
 <p><a href="https://github.com/user-attachments/files/19718026/Schematic_Design_308Ethan.pdf">Schematic_Design_308Ethan.pdf</a></p>
 <p>I had 3/5 checkoffs. This is due to the microchip PIC18F47Q10 that was surface-mounted onto the board was not found by the SNAP. However, after connecting the same headers to a Curiousity nano externally, we were able to read values off of the sensor. It is unknown as of 4/11 why this issue exists.
@@ -689,6 +758,7 @@ Below is the code that was attempting to reach the PIC.</p>
 <p><a href="https://github.com/user-attachments/files/19718045/Subsytem.verification.X.zip">Subsytem verification.X.zip</a></p>
 <p>Here is the Altium File, used to create the PCB and schematic: </p>
 <p><a href="https://github.com/user-attachments/files/19718059/Altium.041125.zip">Altium 041125.zip</a></p>
+<p>[Gerberfiles](<a href="https://github.com/user-attachments/files/20030549/FInal.PCB.order.zip">FInal PCB order.zip</a></p>
 
 
 
